@@ -7,7 +7,7 @@
  	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/style.css?ver=1" />
 	<title>전전포럼</title>
 </head>
 <body>
@@ -17,7 +17,7 @@
 
 <div class="container"> 
 	<div class="table">
-		<table class="list card">
+		<table class="list card app-board-section">
 			<thead>
 				<tr>
 					<th scope="col" class="number">번호</th>
@@ -42,8 +42,12 @@
 			</tbody>
 		</table>
 	</div>
-	<div class="btn">
-		<button type="button">글쓰기</button>
+	<div class="sm:tw-block tw-flex tw-items-center">
+		<div class="tw-flex tw-items-center sm:tw-pb-3"></div>
+		<div class="tw-flex-1"></div>
+		<div class="tw-flex write-btn">
+			<button type="button" onclick="location.href='write'" class="app-button primary sm:tw-flex-1">글쓰기</button>
+		</div>
 	</div>
 </div>
 </body>
