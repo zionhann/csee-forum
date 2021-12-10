@@ -31,14 +31,16 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td class="no">1</td>
-					<td class="title">제목</td>
-					<td class="author">익명</td>
-					<td class="time">12.08</td>
-					<td class="like">77</td>
-					<td class="views">7</td>
-				</tr>
+				<c:forEach items="${board}" var="post">
+					<tr>
+						<td class="no">${post.no}</td>
+						<td class="title">${post.title}</td>
+						<td class="author">${post.author}</td>
+						<td class="time">${post.date}</td>
+						<td class="like">${post.likes}</td>
+						<td class="views">${post.views}</td>
+					</tr>
+				</c:forEach>
 			</tbody>
 		</table>
 	</div>
