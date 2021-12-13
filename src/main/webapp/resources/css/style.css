@@ -36,12 +36,33 @@ tbody {
 	vertical-align: middle;
 }
 
+.list thead tr th {
+	border: none;
+/* 	color: #868e96;
+	font-size: 0.08125rem; */
+}
+
+
+.list tr td {
+	font-weight: normal;	
+	padding: 0.75rem 0.5rem;
+}
+
+.list tbody tr td {
+/* 	color: #868e96; */
+	white-space: nowrap;
+	text-align: center;
+	
+	vertical-align: middle;
+	line-height: 1;
+}
+
 .list tr th {
 	width: 75px;
 	font-weight: bold;
 	text-align: center;
 	white-space: nowrap;
-	color: #868e96;
+/* 	color: #868e96; */
 	font-size: 0.8125rem;
 }
 
@@ -92,6 +113,9 @@ tr {
 	vertical-align: inherit;
 }
 
+td {
+	display: table-cell;
+}
 
 .app-layout{
 	display: flex;
