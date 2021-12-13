@@ -206,3 +206,17 @@ textarea[name="content"]{
 	line-height: 2.5rem;
 	height: 25rem;
 }
+
+.app-select {
+	padding-right: 1.25rem;
+	cursor: pointer;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+    min-width: 142px;
+    height: 40px;
+    background: none;
+    background-color: white;
+    transition: 0.2s ease;
+}

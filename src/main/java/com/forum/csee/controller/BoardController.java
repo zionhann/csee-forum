@@ -12,7 +12,6 @@ import com.forum.csee.vo.BoardVO;
 import com.forum.csee.service.ServiceImpl;
 
 
-
 /**
  * Handles requests for the application home page.
  */
@@ -33,14 +32,14 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value = "/write", method = RequestMethod.GET)
-	public String writePost(BoardVO vo){
-		service.writePost(vo);
+	public String writePost(){
 		return "addForm";
 	}
 	
 	@RequestMapping(value = "/writing-complete", method = RequestMethod.POST)
-	public String uploadPost(){
+	public String uploadPost(BoardVO vo){
 		
+		service.writePost(vo);
 		return "redirect:/";
 	}
 }

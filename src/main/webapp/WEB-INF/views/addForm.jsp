@@ -1,13 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/style.css?ver=1" />
-<title>±€æ≤±‚</title>
+ <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/style.css?ver=2" />
+<title>Í∏ÄÏì∞Í∏∞</title>
 </head>
 <body>
 	<div class="app-layout">
@@ -17,25 +16,32 @@
 					<div class="app-board-section app-board-section-padding">
 						<form action="writing-complete" method="post">
 							<div class="tw-flex tw-items-center tw-mb-3"></div>
-							<!-- ªÛ¥‹ ∑π¿Ãæ∆øÙ -->
+							<!-- ÏÉÅÎã® Î†àÏù¥ÏïÑÏõÉ -->
+							<!-- ÎãâÎÑ§ÏûÑ / ÎπÑÎ∞ÄÎ≤àÌò∏ -->
 							<div class="tw-flex tw-items-center sm:tw-block tw-mb-6">
-								<!-- ƒ´≈◊∞Ì∏Æ -->
-								<div class="app-select sm:tw-mb-3 sm:tw-w-full tw-mr-3"></div>
-								<!-- ¡¶∏Ò -->
-								<input type="text" name="title" title="¡¶∏Ò" placeholder="¡¶∏Ò¿ª ¿‘∑¬«ÿ¡÷ººø‰." class="app-input tw-flex-1 sm:tw-w-full">
+								<div class="app-select sm:tw-mb-3 sm:tw-w-full tw-mr-3">
+									<input type="text" name="author" placeholder="ÎãâÎÑ§ÏûÑ" class="app-input tw-flex-1 sm:tw-w-full">
+								</div>
+								<div class="app-select sm:tw-mb-3 sm:tw-w-full tw-mr-3">
+									<input type="password" name="pw" placeholder="ÎπÑÎ∞ÄÎ≤àÌò∏" class="app-input tw-flex-1 sm:tw-w-full">
+								</div>
+								<div class="tw-flex-1"></div>
+							</div>
+							<div class="tw-flex tw-items-center sm:tw-block tw-mb-6">
+								<input type="text" name="title" title="Ï†úÎ™©" placeholder="Ï†úÎ™©ÏùÑ ÏûÖÎ†•Ìï¥Ï£ºÏÑ∏Ïöî." class="app-input tw-flex-1 sm:tw-w-full">
 							</div>
 							<div class="tw-flex tw-items-center sm:tw-block tw-mb-6">
 									<textarea name="content" class="app-input tw-flex-1 sm:tw-w-full"></textarea>
 							</div>
-								<!-- πˆ∆∞ -->
+								<!-- Î≤ÑÌäº -->
 							<div class="sm:tw-block tw-flex tw-items-center">
-								<!-- ¡¬√¯ -->
+								<!-- Ï¢åÏ∏° -->
 								<div class="tw-flex tw-items-center sm:tw-pb-3"></div>
 								<div class="tw-flex-1"></div>
-								<!-- øÏ√¯ -->
+								<!-- Ïö∞Ï∏° -->
 								<div class="tw-flex">
-									<a href="/csee" class="app-button tw-mr-2 sm:tw-flex-1">√Îº“</a>
-									<button type="submit" class="app-button primary sm:tw-flex-1">µÓ∑œ</button>
+									<a href="/" class="app-button tw-mr-2 sm:tw-flex-1">Ï∑®ÏÜå</a>
+									<button type="submit" class="app-button primary sm:tw-flex-1">Îì±Î°ù</button>
 								</div>
 							</div>
 						</form>

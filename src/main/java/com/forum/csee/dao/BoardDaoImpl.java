@@ -14,12 +14,12 @@ public class BoardDaoImpl implements BoardDAO{
 	private final String namespace = "board";
 	
 	@Autowired
-	SqlSession sqlSeesion;
+	SqlSession sqlSession;
 	
 	@Override
 	public void insertData(BoardVO vo) {
 		// TODO Auto-generated method stub
-		
+		sqlSession.insert(namespace + ".writePost", vo);
 	}
 
 	@Override
@@ -43,7 +43,7 @@ public class BoardDaoImpl implements BoardDAO{
 	@Override
 	public List<BoardVO> selectAll() {
 		// TODO Auto-generated method stub
-		return sqlSeesion.selectList(namespace + ".selectAll");
+		return sqlSession.selectList(namespace + ".selectAll");
 	}
 	
 	/*

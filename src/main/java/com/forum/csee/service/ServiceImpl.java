@@ -1,5 +1,6 @@
 package com.forum.csee.service;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,8 @@ public class ServiceImpl implements Service{
 	@Override
 	public void writePost(BoardVO vo) {
 		// TODO Auto-generated method stub
+		int id = dao.selectAll().size() + 1;
+		vo.setNo(id);
 		dao.insertData(vo);
 	}
 
@@ -46,12 +49,14 @@ public class ServiceImpl implements Service{
 	@Override
 	public List<BoardVO> getPostList() {
 		// TODO Auto-generated method stub
-		//List<BoardVO> board = dao.selectAll();
-/*		SimpleDateFormat newDate = new SimpleDateFormat("MM/DD");
-		
-		for(BoardVO post : board) {
-			post.setDate(newDate.format(dao.getDateFormat(););
-		}*/
+		/*
+		 * List<BoardVO> board = dao.selectAll(); SimpleDateFormat newDate = new
+		 * SimpleDateFormat("MM/dd");
+		 * 
+		 * for(BoardVO post : board) { post.setDate(newDate.format(dao.getDateFormat());
+		 * }
+		 */
+		 
 		return dao.selectAll();
 	}
 }
