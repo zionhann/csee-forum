@@ -11,5 +11,5 @@ public interface Service {
 	public void editPost(BoardVO vo);
 	public void deletePost(BoardVO vo);
 	public BoardVO getPost(BoardVO vo);
-	public List<BoardVO> getPostList();
+	public List<BoardVO> getPostList() throws Exception;
 }
