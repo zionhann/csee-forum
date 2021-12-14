@@ -35,9 +35,9 @@ public class BoardDaoImpl implements BoardDAO{
 	}
 
 	@Override
-	public void selectData(BoardVO vo) {
+	public BoardVO selectData(int no, BoardVO vo) {
 		// TODO Auto-generated method stub
-		
+		return sqlSession.selectOne(namespace + ".selectOne", no); 
 	}
 
 	@Override

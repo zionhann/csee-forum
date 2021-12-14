@@ -19,6 +19,15 @@
     		forum_board
     </select>
     
+    <select id="selectOne" resultType="boardVO">
+    	SELECT
+    		*
+    	FROM
+    		forum_board
+    	WHERE
+    		no = #{no}
+    </select>
+    
     <insert id="writePost">
     	INSERT INTO 
     		forum_board (no, title, author, content) 

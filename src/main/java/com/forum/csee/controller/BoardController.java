@@ -48,9 +48,10 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value = "/visit/{postNo}")
-	public String visitPost((@PathVariable int postNo, BoardVO vo){
+	public String visitPost(@PathVariable("postNo") int no, BoardVO vo, Model model){
 		
-		service.readPost(vo);
-		return "";
+		model.addAttribute("post", service.readPost(no, vo));
+		
+		return "post";
 	}
 }

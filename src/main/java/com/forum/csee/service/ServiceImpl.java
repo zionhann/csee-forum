@@ -22,9 +22,9 @@ public class ServiceImpl implements Service {
 	}
 
 	@Override
-	public void readPost() {
+	public BoardVO readPost(int no, BoardVO vo) {
 		// TODO Auto-generated method stub
-		
+		return dao.selectData(no, vo);
 	}
 
 	@Override
@@ -37,12 +37,6 @@ public class ServiceImpl implements Service {
 	public void deletePost(BoardVO vo) {
 		// TODO Auto-generated method stub
 
-	}
-
-	@Override
-	public BoardVO getPost(BoardVO vo) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 	@Override
