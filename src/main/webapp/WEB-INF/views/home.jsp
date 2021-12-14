@@ -32,9 +32,10 @@
 				</tr>
 			</thead>
 			<tbody>
+				<c:set value="${num}" var="index" />
 				<c:forEach items="${board}" var="post">
 					<tr>
-						<td class="no">${post.no}</td>
+						<td class="no">${index}</td>
 						<td class="title">${post.title}</td>
 						<td class="author">${post.author}</td>
 						<td class="time">
@@ -43,6 +44,7 @@
 						<td class="like">${post.likes}</td>
 						<td class="views">${post.views}</td>
 					</tr>
+				<c:set value="${index-1}" var="index" />
 				</c:forEach>
 			</tbody>
 		</table>

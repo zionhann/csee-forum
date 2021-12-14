@@ -7,7 +7,7 @@ import com.forum.csee.vo.BoardVO;
 public interface Service {
 	
 	public void writePost(BoardVO vo);
-	public void readPost(BoardVO vo);
+	public int readPost();
 	public void editPost(BoardVO vo);
 	public void deletePost(BoardVO vo);
 	public BoardVO getPost(BoardVO vo);

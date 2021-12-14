@@ -26,7 +26,10 @@ public class BoardController {
 	public String mainPage(Model model){
 		
 		List<BoardVO> board = service.getPostList();
+		int count = service.readPost();
+		
 		model.addAttribute("board", board);
+		model.addAttribute("num", count);
 		
 		return "home";
 	}

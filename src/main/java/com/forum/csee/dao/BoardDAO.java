@@ -11,5 +11,5 @@ public interface BoardDAO {
 	public void deleteData(BoardVO vo);
 	public void selectData(BoardVO vo);
 	public List<BoardVO> selectAll();
-	//public Date getDateFormat();
+	public int countData();
 }

@@ -45,12 +45,11 @@ public class BoardDaoImpl implements BoardDAO{
 		// TODO Auto-generated method stub
 		return sqlSession.selectList(namespace + ".selectAll");
 	}
-	
-	/*
-	 * @Override public Date getDateFormat() { return sqlSeesion.insert(namespace +
-	 * ".getDateFormat"); }
-	 */
 
-	
-	
+	@Override
+	public int countData() {
+		// TODO Auto-generated method stub
+		return sqlSession.selectOne(namespace + ".count");
+	}
+
 }

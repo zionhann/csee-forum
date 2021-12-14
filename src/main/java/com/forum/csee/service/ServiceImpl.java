@@ -1,8 +1,5 @@
 package com.forum.csee.service;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,15 +16,15 @@ public class ServiceImpl implements Service {
 	@Override
 	public void writePost(BoardVO vo) {
 		// TODO Auto-generated method stub
-		int id = dao.selectAll().size() + 1;
-		vo.setNo(id);
+		//int id = dao.selectAll().size() + 1;
+		//vo.setNo(id);
 		dao.insertData(vo);
 	}
 
 	@Override
-	public void readPost(BoardVO vo) {
+	public int readPost() {
 		// TODO Auto-generated method stub
-
+		return dao.countData();
 	}
 
 	@Override
@@ -52,18 +49,12 @@ public class ServiceImpl implements Service {
 	public List<BoardVO> getPostList() {
 		// TODO Auto-generated method stub
 		
-		 List<BoardVO> board = dao.selectAll(); 
-		 DateFormat newDate = new SimpleDateFormat("MM/dd");
-		 
-		 for(BoardVO post : board) { 
-			 String _date = newDate.format(post.getDate());
-			 try {
-				post.setDate(newDate.parse(_date));
-			} catch (ParseException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		 }
+		 List<BoardVO> board = dao.selectAll();
+			/*
+			 * int size = board.size();
+			 * 
+			 * for(int i=0; i< size; i++) { board.get(i).setNo(size-i); }
+			 */
 		return board;
 	}
 }
