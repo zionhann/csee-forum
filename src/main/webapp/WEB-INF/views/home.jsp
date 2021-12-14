@@ -36,7 +36,13 @@
 				<c:forEach items="${board}" var="post">
 					<tr>
 						<td class="no">${index}</td>
-						<td class="title">${post.title}</td>
+						<td class="title">
+							<c:url value= "visit" var="visitURI">
+								<c:param name="postNo" value="${post.no}" />
+							</c:url>
+							<a href="${visitURI}">${post.title}</a>
+						
+						</td>
 						<td class="author">${post.author}</td>
 						<td class="time">
 							<fmt:formatDate pattern="MM/dd" value="${post.date}" />

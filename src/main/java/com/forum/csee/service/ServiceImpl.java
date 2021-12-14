@@ -22,9 +22,9 @@ public class ServiceImpl implements Service {
 	}
 
 	@Override
-	public int readPost() {
+	public void readPost() {
 		// TODO Auto-generated method stub
-		return dao.countData();
+		
 	}
 
 	@Override
@@ -56,5 +56,11 @@ public class ServiceImpl implements Service {
 			 * for(int i=0; i< size; i++) { board.get(i).setNo(size-i); }
 			 */
 		return board;
+	}
+
+	@Override
+	public int numberOf() {
+		// TODO Auto-generated method stub
+		return dao.countData();
 	}
 }

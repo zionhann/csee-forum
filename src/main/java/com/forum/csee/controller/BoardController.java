@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -26,7 +27,7 @@ public class BoardController {
 	public String mainPage(Model model){
 		
 		List<BoardVO> board = service.getPostList();
-		int count = service.readPost();
+		int count = service.numberOf();
 		
 		model.addAttribute("board", board);
 		model.addAttribute("num", count);
@@ -44,5 +45,12 @@ public class BoardController {
 		
 		service.writePost(vo);
 		return "redirect:/";
+	}
+	
+	@RequestMapping(value = "/visit/{postNo}")
+	public String visitPost((@PathVariable int postNo, BoardVO vo){
+		
+		service.readPost(vo);
+		return "";
 	}
 }
