@@ -43,8 +43,8 @@
 						<td class="time">
 							<fmt:formatDate pattern="MM/dd" value="${post.date}" />
 						</td>
-						<td class="like">${post.likes}</td>
 						<td class="views">${post.views}</td>
+						<td class="like">${post.likes}</td>
 					</tr>
 				<c:set value="${index-1}" var="index" />
 				</c:forEach>
