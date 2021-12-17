@@ -14,7 +14,8 @@ body{
 	border-collapse: collapse;
 }
 
-.card {
+.card,
+.app-card {
 	border-radius: 0rem;
 	background-color: white;
 	box-shadow: rgba(0, 0, 0, 0.05) 0 6px 20px, rgba(0, 0, 0, 0.05) 0 1px 1px;
@@ -218,7 +219,9 @@ input {
 }
 
 a {
+	color: inherit;
 	text-decoration: inherit;
+	background-color: transparent;
 }
 
 .app-button.primary{
@@ -243,4 +246,230 @@ textarea[name="content"]{
     background: none;
     background-color: white;
     transition: 0.2s ease;
+}
+
+script {
+	display: none;	
+}
+
+.app-article-wrap{
+	width: 100%;
+	margin: 0 auto 2rem;
+}
+
+.app-board-article-head {
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	border-bottom: 1px solid #e9ecef;
+	
+}
+
+.app-board-container{
+	max-width: 100vw;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+}
+
+.app-board-article-head .app-article-category {
+    color: #868e96;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.app-board-article-head h1{
+	margin-bottom: 1rem;
+}
+
+.tw-text-xl{
+	font-size: 1.25rem !important;
+}
+
+.tw-font-bold{
+	font-weight: 700 !important;
+}
+
+h1{
+	margin: 0;
+}
+
+audio, canvas, embed, iframe, img, object, svg, video{
+	display: block;
+    vertical-align: middle;
+}
+
+.tw-items-end{
+	align-items: flex-end !important;
+}
+
+.app-board-article-profile .app-profile-image{
+	position: relative;
+    flex: 0 0 auto;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.app-avatar{
+	flex: 0 0 auto;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    overflow: hidden;
+    background-color: #f1f3f5;
+}
+
+.app-avatar > ion-icon{
+	position: relative;
+    bottom: -9px;
+    color: #adb5bd;
+    font-size: 2.25rem;
+}
+
+.hydrated{
+	visibility: inherit;
+}
+
+ion-icon{
+	vertical-align: middle;
+}
+
+.icon-inner, .ionicon, svg {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.app-board-article-profile .app-profile-body{
+	padding-left: 1rem;
+}
+
+.app-board-article-profile .app-profile-body .author {
+    margin-bottom: 0.25rem;
+}
+
+.tw-text-sm {
+    font-size: .875rem!important;
+}
+
+.app-board-article-head .app-article-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #868e96;
+    font-size: 13px;
+}
+
+.app-article-container {
+    padding-bottom: 1.25rem;
+}
+
+.app-article-content {
+    max-width: 100vw;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* .xe_content, .rhymix_content {
+    font-family: var(--font-family);
+} 
+*/
+
+.tw-pt-8 {
+    padding-top: 2rem!important;
+}
+
+.app-article-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.app-article-vote {
+    --article-vote-up-color: #ff5a57;
+}
+
+.app-article-vote > .app-article-vote__up {
+    color: #ff5a57;
+    border-color: #ffd0cf;
+    background-color: #ffefee;
+}
+
+.app-article-vote > button svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.app-article-vote > button span {
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 0.25rem;
+}
+
+.app-article-vote > button {
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px;
+    padding: 0.75rem 1rem;
+    margin-right: 0.5rem;
+    color: var(--color-gray-600);
+    font-size: 14px;
+    text-decoration: none;
+    border: 1px solid var(--border-color);
+    outline: none;
+    border-radius: var(--border-radius-0);
+    background-color: transparent;
+    transition: 0.2s ease;
+}
+
+button, input, optgroup, select, textarea {
+    padding: 0;
+    line-height: inherit;
+    color: inherit;
+}
+
+.app-article-toolbar {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.app-article-toolbar .app-board-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.app-link {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    color: #868e96;
+    font-size: 0.875rem;
+    transition: color 250ms;
+}
+
+.app-link > i, .app-link > ion-icon, .app-link > svg {
+    width: 1rem;
+    height: 1rem;
+    font-size: 1rem;
+    margin-right: 0.25rem;
+}
+
+.app-board-article-head .app-article-meta .app-article-meta-divider{
+	padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    color: #868e96;
 }
