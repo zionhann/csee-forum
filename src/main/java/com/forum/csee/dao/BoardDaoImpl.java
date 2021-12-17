@@ -47,9 +47,9 @@ public class BoardDaoImpl implements BoardDAO{
 	}
 
 	@Override
-	public int countData() {
+	public int countPosts() {
 		// TODO Auto-generated method stub
-		return sqlSession.selectOne(namespace + ".count");
+		return sqlSession.selectOne(namespace + ".countPosts");
 	}
 
 	@Override

@@ -54,8 +54,8 @@ public class ServiceImpl implements Service {
 	}
 
 	@Override
-	public int numberOf() {
+	public int getNumberOfPosts() {
 		// TODO Auto-generated method stub
-		return dao.countData();
+		return dao.countPosts();
 	}
 }

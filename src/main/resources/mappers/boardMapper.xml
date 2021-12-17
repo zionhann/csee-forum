@@ -12,7 +12,7 @@
     	SELECT date FROM forum_board WHERE no=#{no}
     </select> -->
     
-    <select id="count" resultType="Integer">
+    <select id="countPosts" resultType="Integer">
     	SELECT 
     		COUNT(*)
     	FROM

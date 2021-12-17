@@ -11,6 +11,6 @@ public interface BoardDAO {
 	public void deleteData(BoardVO vo);
 	public BoardVO selectData(int no, BoardVO vo);
 	public List<BoardVO> selectAll();
-	public int countData();
+	public int countPosts();
 	public void countViews(int no);
 }
