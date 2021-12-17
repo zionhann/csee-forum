@@ -52,4 +52,12 @@ public class BoardDaoImpl implements BoardDAO{
 		return sqlSession.selectOne(namespace + ".count");
 	}
 
+	@Override
+	public void countViews(int no) {
+		// TODO Auto-generated method stub
+		sqlSession.update(namespace + ".countViews", no);
+	}
+	
+	
+
 }

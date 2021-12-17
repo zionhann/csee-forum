@@ -24,6 +24,7 @@ public class ServiceImpl implements Service {
 	@Override
 	public BoardVO readPost(int no, BoardVO vo) {
 		// TODO Auto-generated method stub
+		dao.countViews(no);
 		return dao.selectData(no, vo);
 	}
 

@@ -12,4 +12,5 @@ public interface BoardDAO {
 	public BoardVO selectData(int no, BoardVO vo);
 	public List<BoardVO> selectAll();
 	public int countData();
+	public void countViews(int no);
 }

@@ -34,4 +34,14 @@
    		VALUES
    			(#{no}, #{title}, #{author}, #{content})
     </insert>
+    
+    <update id="countViews">
+    	UPDATE
+    		forum_board
+    	SET
+    		views = views + 1
+   		WHERE
+   			no = #{no}
+    		
+    </update>
 </mapper>
