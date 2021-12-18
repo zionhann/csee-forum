@@ -30,9 +30,9 @@
     
     <insert id="writePost">
     	INSERT INTO 
-    		forum_board (no, title, author, content) 
+    		forum_board (title, author, content) 
    		VALUES
-   			(#{no}, #{title}, #{author}, #{content})
+   			(#{title}, #{author}, #{content})
     </insert>
     
     <update id="countViews">
@@ -43,5 +43,15 @@
    		WHERE
    			no = #{no}
     		
+    </update>
+    
+    <update id="editPost">
+    	UPDATE
+    		forum_board
+    	SET
+    		title = #{title},
+    		content = #{content}
+    	WHERE
+    		no = #{no}
     </update>
 </mapper>

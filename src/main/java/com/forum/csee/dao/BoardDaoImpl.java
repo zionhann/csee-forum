@@ -23,9 +23,9 @@ public class BoardDaoImpl implements BoardDAO{
 	}
 
 	@Override
-	public void updateData(BoardVO vo) {
+	public void updateData(int no, BoardVO vo) {
 		// TODO Auto-generated method stub
-		
+		sqlSession.update(namespace + ".editPost", vo);
 	}
 
 	@Override

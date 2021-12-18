@@ -91,7 +91,7 @@
         
 	        						<div class="tw-flex-1"></div>
 	     							<div class="tw-flex">
-										<a href="/" class="app-button tw-mr-2 sm:tw-flex-1">수정</a>
+										<a href="/edit?no=${post.no}" class="app-button tw-mr-2 sm:tw-flex-1">수정</a>
 										<a href="/" class="app-button sm:tw-flex-1">삭제</a>
 									</div>
       							</div>

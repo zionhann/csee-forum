@@ -1,9 +1,13 @@
 @charset "EUC-KR";
 
+html, body, table, input, textarea, select, button {
+    font-family: sans-serif;
+    font-weight: inherit;
+}
 
 body{
 	background-color: #f8f9fa;
-	min-height: 90vh;
+	min-height: 50vh;
 	padding-bottom: env(safe-area-inset-bottom);
 	position: relative;
 }
@@ -19,6 +23,25 @@ body{
 	border-radius: 0rem;
 	background-color: white;
 	box-shadow: rgba(0, 0, 0, 0.05) 0 6px 20px, rgba(0, 0, 0, 0.05) 0 1px 1px;
+}
+
+.list .title {
+    width: 100%;
+    white-space: normal;
+    overflow: hidden;
+    padding: 0.5rem 1rem;
+}
+
+.list .title a > .title-link {
+    border-bottom: 1px solid transparent;
+    margin-right: 3px;
+    transition: 0.2s;
+}
+
+.list .title a {
+    color: black;
+    text-decoration: none !important;
+    line-height: 1.6;
 }
 
 table {
@@ -39,8 +62,8 @@ tbody {
 
 .list thead tr th {
 	border: none;
-/* 	color: #868e96;
-	font-size: 0.08125rem; */
+ 	color: #868e96;
+	font-size: 0.08125rem; 
 }
 
 
@@ -50,7 +73,7 @@ tbody {
 }
 
 .list tbody tr td {
-/* 	color: #868e96; */
+ 	color: #868e96; 
 	white-space: nowrap;
 	text-align: center;
 	
@@ -63,7 +86,7 @@ tbody {
 	font-weight: bold;
 	text-align: center;
 	white-space: nowrap;
-/* 	color: #868e96; */
+ 	color: #868e96;
 	font-size: 0.8125rem;
 }
 

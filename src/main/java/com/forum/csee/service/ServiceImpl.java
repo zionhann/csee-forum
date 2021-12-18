@@ -29,9 +29,9 @@ public class ServiceImpl implements Service {
 	}
 
 	@Override
-	public void editPost(BoardVO vo) {
+	public void editPost(int no, BoardVO vo) {
 		// TODO Auto-generated method stub
-
+		dao.updateData(no, vo);
 	}
 
 	@Override
