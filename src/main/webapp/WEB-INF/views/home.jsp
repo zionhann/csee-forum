@@ -58,6 +58,7 @@
 						</table>
 					</div>
 					<div class="sm:tw-block tw-flex tw-items-center">
+						<button type="button" onclick="location.href='/login/logout'" class="app-button tw-mr-2 sm:tw-flex-1">로그아웃</button>
 						<div class="tw-flex tw-items-center sm:tw-pb-3"></div>
 						<div class="tw-flex-1"></div>
 						<div class="tw-flex write-btn">
