@@ -29,9 +29,9 @@ public class BoardDaoImpl implements BoardDAO{
 	}
 
 	@Override
-	public void deleteData(BoardVO vo) {
+	public void deleteData(int no) {
 		// TODO Auto-generated method stub
-		
+		sqlSession.delete(namespace + ".delPost", no);
 	}
 
 	@Override

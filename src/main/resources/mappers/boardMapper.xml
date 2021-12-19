@@ -54,4 +54,12 @@
     	WHERE
     		no = #{no}
     </update>
+    
+    <delete id="delPost">
+    	DELETE
+    	FROM
+    		forum_board
+   		WHERE
+   			no = #{no}
+    </delete>
 </mapper>

@@ -71,4 +71,12 @@ public class BoardController {
 		
 		return "redirect:/visit/{postNo}";
 	}
+	
+	@RequestMapping(value = "/delete", method = RequestMethod.GET)
+	public String deletePost(@RequestParam int no, Model model){
+
+		 service.deletePost(no);
+
+		return "redirect:/";
+	}
 }

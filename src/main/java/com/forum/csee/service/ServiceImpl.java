@@ -35,9 +35,9 @@ public class ServiceImpl implements Service {
 	}
 
 	@Override
-	public void deletePost(BoardVO vo) {
+	public void deletePost(int no) {
 		// TODO Auto-generated method stub
-
+		dao.deleteData(no);
 	}
 
 	@Override
